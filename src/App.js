@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import NavbarMenu from './Components/Navbar/NavbarMenu';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Route} from 'react-router-dom';
+import Add from './Components/Add/Add';
+import Todo from './Components/Todo/Todo';
+import SingleAutopart from './Components/SingleAutopart/SingleAutopart';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavbarMenu />
+      <Route 
+        path='/'
+        component={Todo}
+        exact={true}
+      />
+      <Route 
+        path='/autopart/:id'
+        component={SingleAutopart}
+        exact={true}
+      />
+      <Route 
+        component={Add}
+        path='/add'
+        exact={true}
+      />
     </div>
   );
 }

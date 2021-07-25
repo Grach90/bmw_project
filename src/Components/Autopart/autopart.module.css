@@ -1,0 +1,15 @@
+.link {
+    display: flex;
+    border-top: 1px solid #efefef;
+    padding: 12px 14px;
+}
+
+.image {
+    width: 115px;
+    height: 90px;
+    margin-right: 10px;
+}
+
+.image1 {
+    margin-right: 10px;
+}
